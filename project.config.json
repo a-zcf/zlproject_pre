@@ -1,0 +1,140 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.0.4",
+	"appid": "wx62dda7da1dd02e10",
+	"projectname": "zlpro",
+	"cloudfunctionTemplateRoot": "",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 4,
+			"list": [
+				{
+					"id": -1,
+					"name": "pages/home/home",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/my/my",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "pages/login/login",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/details/details",
+					"pathName": "pages/details/details",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 4,
+					"name": "pages/detailsPage/details/details",
+					"pathName": "pages/detailsPage/details/details",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myConcern/myConcern",
+					"pathName": "pages/myConcern/myConcern",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/aboutUs/aboutUs",
+					"pathName": "pages/aboutUs/aboutUs",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myRelease/myRelease",
+					"pathName": "pages/myRelease/myRelease",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 8,
+					"name": "pages/releaseInput/releaseRent/releaseRent",
+					"pathName": "pages/releaseInput/releaseRent/releaseRent",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/uploader/uploader",
+					"pathName": "pages/uploader/uploader",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/releaseNav/navOfficerent/navOfficerent",
+					"pathName": "pages/releaseNav/navOfficerent/navOfficerent",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 11,
+					"name": "pages/releaseNav/bcsHaredOffice/bcsHaredOffice",
+					"pathName": "pages/releaseNav/bcsHaredOffice/bcsHaredOffice",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

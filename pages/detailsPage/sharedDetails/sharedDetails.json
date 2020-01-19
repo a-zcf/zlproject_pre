@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "共享房源详情",
+  "usingComponents": {
+    "i-icon": "../../dist/icon/index"
+  }
+}

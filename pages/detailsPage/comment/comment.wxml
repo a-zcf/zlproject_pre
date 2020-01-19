@@ -1,0 +1,38 @@
+<import src="../../../wxParse/wxParse.wxml"/>
+<view class="fydp">
+  <view class="fydp-title">
+  <template is="wxParse" data="{{wxParseData:baseservicer.nodes}}"/>
+  {{tips}}
+    <!-- <view class="title-text">房源点评</view>
+    <view class="fydp-con">双地铁 福田CBD位置 单价60000/平高性价</view> -->
+  </view>
+
+  <!-- <view class="fydp-title">
+    <view class="title-text">大厦介绍</view> 
+    <view class="fydp-con">Nullam tempor tortor in cursus gravida. Sed fermentum quam eu libero condimentum tincidunt. Suspendisse potenti. Sed consectetur, nunc sit amet auctor venenatis, eros lectus interdum urna, et gravida augue augue in purus. Fusce fringilla lectus vitae
+      lacus vulputate, sed feugiat felis congue. Nunc vitae consequat felis, tincidunt
+    </view>
+  </view>
+
+  <view class="fydp-title">
+    <view class="title-text">交通配套</view>
+    <view class="fydp-con">Nullam tempor tortor in cursus gravida. Sed fermentum quam eu libero condimentum tincidunt. Suspendisse potenti. Sed consectetur, nunc sit amet auctor venenatis, eros lectus interdum urna, et gravida augue augue in purus. Fusce fringilla lectus vitae
+      lacus vulputate, sed feugiat felis congue. Nunc vitae consequat felis, tincidunt
+    </view>
+  </view>
+
+  <view class="fydp-title">
+    <view class="title-text">物业介绍</view>
+    <view class="fydp-con">Nullam tempor tortor in cursus gravida. Sed fermentum quam eu libero condimentum tincidunt. Suspendisse potenti. Sed consectetur, nunc sit amet auctor venenatis, eros lectus interdum urna, et gravida augue augue in purus. Fusce fringilla lectus vitae
+      lacus vulputate, sed feugiat felis congue. Nunc vitae consequat felis, tincidunt
+    </view>
+  </view>
+
+  <view class="fydp-title">
+    <view class="title-text">周边配套</view>
+    <view class="fydp-con">Nullam tempor tortor in cursus gravida. Sed fermentum quam eu libero condimentum tincidunt. Suspendisse potenti. Sed consectetur, nunc sit amet auctor venenatis, eros lectus interdum urna, et gravida augue augue in purus. Fusce fringilla lectus vitae
+      lacus vulputate, sed feugiat felis congue. Nunc vitae consequat felis, tincidunt
+    </view>
+  </view> -->
+
+</view>

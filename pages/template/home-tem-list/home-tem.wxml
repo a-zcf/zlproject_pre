@@ -1,0 +1,18 @@
+<template name="homeTemlist">
+    <view class="listSpecials-content">
+      <image class="specialsImg" src="{{imgList}}{{imageUrl}}"></image>
+      <view class="con-right">
+        <text class="describe">{{title}}</text>
+        <view class="address">
+          <text class="address_01">{{village}}</text>
+          <text class="address_01">{{address_02}}</text>
+          <text>{{maxHouseArea}}㎡</text>
+        </view>
+        <text class="office-rent">{{houseType===1 && rentable==='1'?'写字楼租':'' ||houseType===1 && rentable==='0'?'写字楼售':'' || houseType===2?'新房':'' || houseType===3?'共享办公':''}}</text>
+        <view class="square-price">
+          <text class="monthlySquare">{{averagePriice}}元/㎡月</text>
+          <text class="price">{{minUnitPrice}}元/月</text>
+        </view>
+      </view>
+    </view>
+</template>

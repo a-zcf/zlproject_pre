@@ -1,0 +1,306 @@
+@import '/pages/template/footprint-tem-list/footprint-tem-list.wxss';
+.officerent {
+  width: 100%;
+}
+
+.sousuo {
+   width: 95%;
+   height: 70rpx;
+   margin: auto;
+   margin-top: 30rpx;
+   border: 1px solid #999;
+   border-radius: 15rpx;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.sousuo > .icon-sousuo {
+  margin-left: 15rpx;
+}
+
+ .sousuo > .sousuo-inp {
+   min-width: 72%;
+   height: 70rpx;
+   margin-left: 15rpx;
+   padding: 5rpx;
+}
+
+.sousuo > .sousuo-text {
+  width: 20%;
+  height: 70rpx;
+  margin: 0rpx;
+  padding: 0px;
+  font-size: 35rpx;
+  line-height: 70rpx;
+  border-radius: 0px;
+  color: #ff5722;
+  background-color:transparent;
+  border-left: 1px solid #999;
+  /* border: 1px solid #999; */
+}
+button::after{
+  border-radius: 0px;
+  border:none;
+}
+.icon-clear{
+  margin-right: 15rpx;
+}
+/*下拉菜单  */
+ 
+/* 下面是tobar */
+ 
+#swiper-tab {
+  width: 100%;
+  position: relative;
+  margin-top: 15rpx;
+}
+ 
+.swiper-tab {
+  width: 100%;
+  text-align: center;
+  line-height: 80rpx;
+  background-color: white;
+
+}
+ 
+.swiper-tab-list {
+  font-size: 30rpx;
+  display: inline-block;
+  width: 20%;
+  color: #666;
+  border-bottom: 0rpx;
+  position: relative;
+}
+ 
+.swiper-tab-list i {
+  position: absolute;
+  bottom: 30%;
+  right: 14%;
+  width: 0px;
+  height: 0px;
+  border: 5px solid #4e4e4e;
+  border-top-color: #4e4e4e;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+
+.on {
+  color: #f63;
+}
+ 
+.on i {
+  border: 5px solid #f63;
+  border-top-color: #f63;
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-right-color: transparent;
+}
+.on .i-icon {
+  color: #f63;
+}
+ 
+.swiper-box {
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+ 
+.swiper-box view {
+  text-align: center;
+}
+ 
+.swiper-item {
+  background: #fff;
+  width: 100%;
+  height: 800rpx;
+  display: none;
+  position: absolute;
+  top: 100rpx;
+  z-index: 333333;
+  left: 0;
+  animation: displays 1s;
+}
+.swiper-item .qiehuan {
+  width: 100%;
+  padding: 0rpx 20rpx 0rpx 20rpx;
+}
+.swiper-item .qiehuan .qiehuan-qy{
+  height: 80rpx;
+  line-height: 80rpx;
+}
+ 
+@keyframes displays {
+  from {
+    height: 0px;
+  }
+ 
+  to {
+    height: 600rpx;
+  }
+}
+ 
+.swiper-beijing {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  display: none;
+  z-index: 888;
+  animation: 1s;
+}
+ 
+/*添加class改变样式  */
+ 
+.location_bottom {
+  width: 100%;
+  font-size: 28rpx;
+  align-items: center;
+}
+.location_bottom .danjia {
+  width: 100%;
+  margin: auto;
+  margin-top:25rpx; 
+}
+.location_bottom .danjia .danjia-title {
+  width: 95%;
+  margin: auto;
+  font-size: 35rpx;
+}
+.location_bottom .danjia .mianji {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.danjia .mianji .mianji-text {
+  width: 30%;
+  height: 60rpx;
+  margin: 0rpx 0rpx 0rpx 19rpx;
+  background-color: rgb(231, 229, 229);
+  text-align: center;
+  line-height: 60rpx;
+  /* margin: 15rpx 15rpx 15rpx 0rpx; */
+  margin-top:25rpx;
+}
+ 
+ 
+
+ 
+/*// 筛选  */
+ 
+.shaixuankuang {
+  width: 100%;
+  height: 800rpx;
+  overflow: hidden;
+  max-height: 800rpx;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+ 
+.zidingyi span {
+  float: left;
+  font-size: 16px;
+  line-height: 40px;
+  color: #666;
+  margin-right: 15rpx;
+}
+ 
+.zidingyi input {
+  width: 50px;
+  padding-left: 10rpx;
+  float: left;
+  margin-top: 10rpx;
+  font-size: 15px;
+  line-height: 40px;
+  border: solid 1px #eee;
+  color: #666;
+}
+ 
+.zidingyi p {
+  float: left;
+  margin: 0 15rpx;
+  line-height: 40px;
+  color: #666;
+}
+ 
+.zidingyi button {
+  height: 28px;
+  float: left;
+  margin: 10rpx 0 0 25rpx;
+  font-size: 13px;
+  line-height: 28px;
+  /* border: solid 1px #eee; */
+  color: #666;
+}
+ 
+.qingkong {
+  width: 95%;
+  height: 40px;
+  margin:355rpx auto 30rpx;
+  display: flex;
+  justify-content: space-between;
+  font-size: 30rpx; 
+  font-weight: 500;
+  text-align: center;
+}
+.qingkong2 {
+  margin-top:130rpx;
+}
+ 
+.qingkong span {
+  width: 45%;
+  height: 45px;
+   background: #e4e4e4;
+  box-sizing: border-box;
+  color: #000;
+  line-height: 45px;
+  border-radius: 3px;
+}
+.qingkong p{
+    width: 45%;
+    height: 45px;
+    color: #fff;
+    line-height: 45px;
+    background: #006699;
+    border-radius: 3px;
+}
+.wylx{
+  width:95%;
+  margin: auto;
+}
+.wylx .wylx-title {
+  width:100%;
+  font-size: 35rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  margin-top: 20rpx;
+}
+.wylx .wylx-text {
+   display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  text-align: center;
+  /* margin-top: 15rpx; */
+}
+.wylx-text .text-style {
+  width: 30%;
+  height: 60rpx;
+  background-color: #e4e4e4;
+  line-height: 60rpx;
+  margin-top: 25rpx;
+}
+/* 足迹房源列表 */
+.list{
+  width: 100%;
+  background-color: #fff;
+  /* margin-top: 20rpx; */
+  box-sizing: border-box;
+}
+.list-content{
+   width: 100%;
+   margin: auto;
+}

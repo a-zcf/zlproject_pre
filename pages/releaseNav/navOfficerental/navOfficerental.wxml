@@ -1,0 +1,46 @@
+<!-- 写字楼售上下架 -->
+<view class="ui_tab">
+  <view class="ui_navbar">
+    <view class="ui_navbar_item {{barIndex==index?'ui_navbar_item_on':''}}" data-index="{{index}}" wx:for="{{barList}}" wx:key="{{index}}" bindtap="clickBar">
+      {{item}}
+    </view>
+  </view>
+  <!-- 已上架 -->
+  <view wx:if="{{barIndex==0}}" class="barIndex">
+    <view class="listSpecials-content" wx:for="{{navOrprintData}}" wx:key>
+      <image class="specialsImg" src="{{item.specialsImg}}"></image>
+      <view class="con-right">
+        <text class="describe">{{item.describe}}已上架</text>
+        <view class="address">
+          <text class="address_01">{{item.address_01}}</text>
+          <text class="address_01">{{item.address_02}}</text>
+          <text>{{item.squareMetre}}</text>
+        </view>
+        <text class="office-rent">{{item.officeRent}}</text>
+        <view class="square-price">
+          <text class="monthlySquare">{{item.monthlySquare}}</text>
+          <text class="price">{{item.price}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 已下架 -->
+  <view wx:if="{{barIndex==1}}" class="barIndex">
+    <view class="listSpecials-content" wx:for="{{navOrprintData}}" wx:key>
+      <image class="specialsImg" src="{{item.specialsImg}}"></image>
+      <view class="con-right">
+        <text class="describe">{{item.describe}}已下架</text>
+        <view class="address">
+          <text class="address_01">{{item.address_01}}</text>
+          <text class="address_01">{{item.address_02}}</text>
+          <text>{{item.squareMetre}}</text>
+        </view>
+        <text class="office-rent">{{item.officeRent}}</text>
+        <view class="square-price">
+          <text class="monthlySquare">{{item.monthlySquare}}</text>
+          <text class="price">{{item.price}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

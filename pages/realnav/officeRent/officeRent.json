@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "写字楼租",
+  "usingComponents": {
+    "i-load-more": "../../dist/load-more/index"
+  }
+}

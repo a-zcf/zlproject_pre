@@ -1,0 +1,18 @@
+<template name="footprintList">
+  <view class="listSpecials-content">
+    <image class="specialsImg" src="{{specialsImg}}"></image>
+    <view class="con-right">
+      <text class="describe">{{describe}}</text>
+      <view class="address">
+        <text class="address_01">{{address_01}}</text>
+        <text class="address_01">{{address_02}}</text>
+        <text>{{squareMetre}}</text>
+      </view>
+      <text class="office-rent">{{officeRent}}</text>
+      <view class="square-price">
+        <text class="monthlySquare">{{monthlySquare}}</text>
+        <text class="price">{{price}}</text>
+      </view>
+    </view>
+  </view>
+</template>

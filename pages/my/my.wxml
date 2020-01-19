@@ -1,0 +1,27 @@
+<!--pages/my/my.wxml-->
+<view class="my">
+  <view class="my-head">
+    <image class="avatar" src='{{userInfo.avatarUrl}}'></image>
+    <view class="nickname">
+      <view class="phone" style="display: none;">18*****23</view>
+      <text>昵称：{{userInfo.nickName}}</text>
+    </view>
+  </view>
+  <view class="my-list">
+   <view class="list-con" catchtap="myConcem">
+    <image class="icomImg" src="{{followImg}}"></image>
+    <text class="listText">{{followTitle}}</text>
+    <i class="iconfont icon-gengduo1 icon-more"></i>
+   </view>
+   <view class="list-con" catchtap="myRelease" style="display: none;">
+    <image class="icomImg" src="{{releaseImg}}"></image>
+    <text class="listText">{{releaseTitle}}</text>
+    <i class="iconfont icon-gengduo1 icon-more"></i>
+   </view>
+    <view class="list-con" catchtap="aboutus">
+    <image class="icomImg" src="{{aboutImg}}"></image>
+    <text class="listText">{{aboutTitle}}</text>
+    <i class="iconfont icon-gengduo1 icon-more"></i>
+   </view>
+  </view>
+</view>

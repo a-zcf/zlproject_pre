@@ -1,0 +1,124 @@
+/* @import "wxParse/wxParse.wxss"; */
+/* 图标 */
+@font-face {font-family: "iconfont";
+  src: url('iconfont.eot?t=1572938660375'); /* IE9 */
+  src: url('iconfont.eot?t=1572938660375#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,d09GMgABAAAAAAVQAAsAAAAACngAAAUBAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHEIGVgCDdAqHGIYbATYCJAMgCxIABCAFhG0HcRseCRFVpGeQ/Uiw3UadE6qsHMaNzdAIDd4ED/y76Z+bGyBL8LahMBEXoHWy7YnOzejTT3H2Xf7WVggTYW7Kb1l+646019+Re2nK8jiNUgiJkGDEth08KqEF/35sVrzTiPqQTC//o2qJI5HJXN8tJHG/vlBHKMt9FuaV6UkbuOTvdDUEoFOICogWrTr0QEOFdhKAmDB29FC0jAW1gS7Q9PaKI1W/+BwbmpKr3AQ+s8sXP1NNaKBgk9CeXUa1HEGTOPG1MpKIGKAJSKdzAcf1QQIVABWml1Z6YkifqYBEv5eqDAK8nCEhvtx88aR44Xjp+Iz42kSiMAqNGDQEDzgmF1ZQsWP759khjRPUEVkHxJGSqM0HExLaJJgQ0BaGCQXa0jChQjsDJuzQrkUHNgA0fYQX8IFIBpEF6RrYjIqC+PQw1nS5TGE6C/gNt0uX+5coLoc+ftzryZPejx71fPiwh4Nhj7O44l59o/q3Zq9vY1sjKT17fB3ZZgV6f7fCFHN7XXgi6uTtVm7c8xtrR3TSGE3zYw8bNGh0+rFBtG7kUcOR26zyo888iT6uf18xPZI84uvY9mhg9KhvozuslJHfdI9tZdk2Y8uO6Pb57o07WXbM8Fg78i8/Pi3xRo/rRVefi0VaEC1Hv41daXNJW1Bmn9jjXrb1T3ob1rbI1hL6lOdRlx0r6bG2CLFih7UtyMOHgzeVb5DcocfG5I2bTaFvrrjKt98uF9EndIaeRq8VJ8r2HDxydKLhKfXff+cURxqr4VjUZL18+lRCuX6HMbx705UzECnVV6/5PlQsuCw7Jzc7N1g8lLt21ahiZaD+EE/8w93qi9rIlQ/vrpHc+OCud8lVD5KzNGdOud/zPuQEfKZ9e5Y8sFfJSJCOZynZSnI2ajQPNx1f6VWFsq/GV0mfWWXAgCozM0Tnq70HezRose/gqwcqOcvMKk2BN2HnsnB4WWr11GVjxnKJw9k7kFfgTdD4NbT2dfU3te5Zm/feN40Cgc2pb8oY5YnDM4K/1i5obt57L6AXvG5GNOOXUP431d6EYntf9wi9rvUguQmBUPBnTnldVi9I1SYphVp1bEeLVH/Njn3F3aTcUjlF7oViSUlq5SGF3J5SR5Sc0jnKETG4XeWOC12xgsP+flWtK05fc7R+f9mgb7B59WodqxWpWMpsVnpaux7jVn5XN11t8ovwSH6yBwIpJmEAEuflWdkMEtp1RjaxrOyxZJj1Vnkni7AuqciO2/8kj8sAgAwpjn/v33Bxd4Higz0NftMMFYBneS02Qj5NFRoKdJb+VwfUxQCqdZKTVVNvUjm5OMpgQUzlaYv9lFIAnc/APzTg5/WUupTOtSDQSImg4KAgSC1NCaJKrQA2hhpgp2kMuvLujzckYfvEXFDONwPB6wcUbmdA8volqtQ/sDH9g523fdD16uqMhlKFs2tGJWhBf0IwVJywy5mrf0DfkuK03DJfkGuIw9SP+fw9FuQp9qlvfhZx4Jgy3LHrYUoEK9MWjfSLyLoZBlf1Sb2hvHOmOYYUgSygfQKBQQqn54uzwu8/QF6TKNww9i76ArEqrB5MemMH4r2mdBq7lfWrN95MCLfbzmEkA3dwocQzBKzVm20hQ/SWAanVxpBMc101/fK6/E4vADr6dq3Vbjo9vX1d6k+MR5VabXTsmypfSzvxWLxtNB27i584LB9BFX+pmB+CX6RzIaWdHQAAAA==') format('woff2'),
+  url('iconfont.woff?t=1572938660375') format('woff'),
+  url('iconfont.ttf?t=1572938660375') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('iconfont.svg?t=1572938660375#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-more:before {
+  content: "\e613";
+}
+
+.icon-sousuo:before {
+  content: "\e61f";
+}
+
+.icon-guanzhu:before {
+  content: "\e609";
+}
+
+.icon-gengduo1:before {
+  content: "\e627";
+}
+
+.icon-gengduo:before {
+  content: "\e6a0";
+}
+
+.icon-fenxiang:before {
+  content: "\e674";
+}
+
+.icon-arrRight-fill:before {
+  content: "\e600";
+}
+
+
+/*
+*页面样式
+*/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}  
+.hidden{
+  display: none;
+}
+
+page{
+  width: 100%;
+  color: #2d2e33;
+   font-family: 'Arial','Microsoft Yahei', "Helvetica Neue", Helvetica, Tahoma, sans-serif; 
+   font-size: 28rpx;
+   /* padding-bottom:120rpx; */
+}
+/**底部导航**/
+.footer_container{
+	display: flex;
+  justify-content: space-between;
+	position: fixed;
+	height: 100rpx;
+	width: 100%;
+	background: ghostwhite;
+  border-top:solid 1rpx #e3e3e3;
+  color: #ffffff;
+	bottom: 0;
+	left:0;
+   z-index: 999;
+}
+
+.foot-item{
+   width: 100%;  
+   -webkit-align-items: center;
+   -webkit-justify-content: center;
+   align-items: center;
+   justify-content: center;
+   text-align:center;
+   font-size:24rpx;
+   font-weight:bolder;
+   color:#FF69B4;
+   margin-top:14rpx;
+}
+.foot-item2{
+  width: 100%;  
+   -webkit-align-items: center;
+   -webkit-justify-content: center;
+   align-items: center;
+   justify-content: center;
+   text-align:center;
+   font-size:24rpx;
+   font-weight:bolder;
+   color:#FF69B4;
+   margin-top:-50rpx;
+}
+.foot1 image{
+  width: 36rpx;
+  height: 47rpx;
+}
+
+.foot2 image{
+  width:120rpx;
+  height:115rpx;
+}
+.foot3 image{
+  width: 36rpx;
+  height:47rpx;
+}

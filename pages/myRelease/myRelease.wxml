@@ -1,0 +1,40 @@
+<view class="myrelease">
+  <view class="active-navigation">
+    <view class="active-abci" bindtap="navOfficerent">
+      <image class="active-img" src="../../images/icon/home/navigation-3.png"></image>
+      <view class="active-text">写字楼租</view>
+    </view>
+    <view class="active-abci" bindtap="navOfficerental">
+      <image class="active-img" src="../../images/icon/home/release-1.png"></image>
+      <view class="active-text">写字楼售</view>
+    </view>
+    <view class="active-abci" bindtap="newBuil">
+      <image class="active-img" src="../../images/icon/home/navigation-2.png"></image>
+      <view class="active-text">新房</view>
+    </view>
+    <view class="active-abci" bindtap="sharedOffice">
+      <image class="active-img" src="../../images/icon/home/release-1.png"></image>
+      <view class="active-text">共享办公</view>
+    </view>
+  </view>
+  <!-- 列表 -->
+  <view class="release-list">
+    <view class="list-text" bindtap="xzlz">
+      <text>个人发布写字楼租</text>
+      <i class="iconfont icon-gengduo1"></i>
+    </view>
+    <view class="list-text" bindtap="xzls">
+      <text>个人发布写字楼售</text>
+      <i class="iconfont icon-gengduo1"></i>
+    </view>
+    <view class="list-text" bindtap="newfang">
+      <text>个人发布新房</text>
+      <i class="iconfont icon-gengduo1"></i>
+    </view>
+    <view class="list-text" bindtap="gxbg">
+      <text>个人发布共享办公</text>
+      <i class="iconfont icon-gengduo1"></i>
+    </view>
+  </view>
+
+</view>

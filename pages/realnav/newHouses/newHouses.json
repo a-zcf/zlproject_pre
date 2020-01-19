@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "新楼列表",
+  "usingComponents": {
+    "i-load-more": "../../dist/load-more/index"
+  }
+  
+}

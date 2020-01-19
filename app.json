@@ -1,0 +1,77 @@
+{
+  "pages": [
+    "pages/login/login",
+    "pages/welcome/welcome",
+    "pages/home/home",
+    "pages/footprint/footprint",
+    "pages/my/my",
+    "pages/realnav/officeRent/officeRent",
+    "pages/realnav/officeSales/officeSales",
+    "pages/realnav/newHouses/newHouses",
+    "pages/realnav/officeShared/officeShared",
+
+    "pages/detailsPage/details/details",
+    "pages/detailsPage/newHousDetails/newHousDetails",
+    "pages/detailsPage/moreInformation/moreInformation",
+    "pages/detailsPage/floorDynamic/floorDynamic",
+    "pages/detailsPage/salesDetails/salesDetails",
+    "pages/detailsPage/comment/comment",
+    "pages/detailsPage/sharedDetails/sharedDetails",
+    "pages/detailsPage/rentDetails/rentDetails",
+
+    "pages/newDetails/newDetails",
+    "pages/myConcern/myConcern",
+    "pages/aboutUs/aboutUs",
+    "pages/myRelease/myRelease",
+    "pages/releaseInput/releaseRent/releaseRent",
+    "pages/releaseInput/releaseSale/releaseSale",
+    "pages/releaseInput/releaseHouse/releaseHouse",
+    "pages/releaseInput/releaseShared/releaseShared",
+    "pages/releaseNav/navOfficerent/navOfficerent",
+    "pages/releaseNav/navOfficerental/navOfficerental",
+    "pages/releaseNav/newBuil/newBuil",
+    "pages/releaseNav/sharedOffice/sharedOffice",
+    "pages/releaseNav/bcOfficerent/bcOfficerent",
+    "pages/releaseNav/bcOfficerental/bcOfficerental",
+    "pages/releaseNav/bcNewBuil/bcNewBuil",
+    "pages/releaseNav/bcsHaredOffice/bcsHaredOffice"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#4169E1",
+    "navigationBarTitleText": "产品展示",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": false,
+    "backgroundTextStyle": "dark"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "位置授权"
+    }
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#18b5cd",
+    "borderStyle": "black",
+    "list": [
+      {
+        "selectedIconPath": "images/icon/home/home-2.png",
+        "iconPath": "images/icon/home/home-1.png",
+        "pagePath": "pages/home/home",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/icon/home/footprint-2.png",
+        "iconPath": "images/icon/home/footprint-1.png",
+        "pagePath": "pages/footprint/footprint",
+        "text": "足迹"
+      },
+      {
+        "selectedIconPath": "images/icon/home/my-2.png",
+        "iconPath": "images/icon/home/my-1.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,34 @@
+<import src="../../../wxParse/wxParse.wxml"/>
+<view class="floor">
+  <view class="floor-head">
+    <view class="floor-headCon">
+      <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" circular="{{circular}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActivecolor}}" class="swiperclass">
+        <block wx:for="{{newHousDetails.itemList}}" wx:key>
+          <swiper-item>
+            <image src="https://www.scrol.top/house/{{item.imageUrl}}" class="slide-image" />
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="floor-headMs">
+      <view>{{newHousDetails.title}}</view>
+      <view>楼盘均价：<text class="floor-headMstext">{{newHousDetails.averagePriice}}元/㎡</text></view>
+      <view>开盘时间：{{openDate}}</view>
+    </view>
+  </view>
+
+  <view class="floor-con">
+   <template is="wxParse" data="{{wxParseData:baseservicer.nodes}}"/>
+   {{tips}}
+  </view>
+  <!-- <view class="floor-con">
+   <view class="foor-title">大族云峰一期已售完</view>
+   <view class="foor-text">首付就区文诗那发哦我富婆问客服颇为撇开富婆我看客服颇为疯狂皮康王v</view>
+   <view class="foor-time">2019年10月11日</view>
+  </view>
+  <view class="floor-con">
+   <view class="foor-title">大族云峰二期正式开盘</view>
+   <view class="foor-text">首付就区文诗那发哦我富婆问客服颇为撇开富婆我看客服颇为疯狂皮康王v</view>
+   <view class="foor-time">2019年10月11日</view>
+  </view> -->
+</view>

@@ -1,0 +1,7 @@
+<view class="welcome">
+    <image class="logo" src='../../images/user_z.png'></image>
+    <text class="text">{{defaultText}}</text>
+    <button class="btn" type="primary" class="btn" open-type="getUserInfo" bindgetuserinfo="getUserInfoTap">
+    {{defaultButton}}
+    </button>
+</view>

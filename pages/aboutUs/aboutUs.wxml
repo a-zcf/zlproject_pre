@@ -1,0 +1,8 @@
+<view class="abouus">
+  <image class="abouus-img" src="/images/switch_img01.png"></image>
+  <text class="abouus-title">深圳经销商房源</text>
+  <text class="abouus-text">深圳经销商房源提供信息搜索、房源查看、电话联系等直接业主和购房者的对话，使得房产交易更加便捷、有效率。</text>
+  <text class="abouus-https">官方网站：https://infinity.tribeca.com.au/documents
+</text>
+  <text class="abouus-phone">客服电话：10133286（马正明）</text>
+</view>

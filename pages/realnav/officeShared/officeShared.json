@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "共享办公",
+  "usingComponents": {
+    "i-load-more": "../../dist/load-more/index"
+  }
+}

@@ -1,0 +1,164 @@
+@import '/pages/template/home-tem-list/home-tem.wxss';
+page{
+ background-color: #f2f2f2;
+}
+.home{
+  width: 100%;
+} 
+.home-head{
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  padding-bottom: 15rpx;
+}
+/* 图片切换 */
+.swiperclass{
+  width: 750rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+.swiperclass, .slide-image {
+  width: 750rpx;
+  height: 350rpx;
+}
+/* 下拉选择框、搜索框 */
+.head_ss{
+  width: 100%;
+padding-top:10rpx; 
+display: flex;
+flex-wrap:nowrap;
+}
+.select{
+ box-sizing: border-box;
+ width: 20%;
+ height: 70rpx;
+ border-radius: 8rpx;
+ display: flex;
+ align-items: center;
+ color: #666;
+}
+.select_text{
+ font-size: 28rpx;
+ flex: 1;
+ height: 70rpx;
+ overflow:hidden;
+ line-height: 70rpx;
+ text-align: center;
+}
+.select_icon{
+ width: 40rpx;
+ height: 40rpx;
+ display: block;
+ transition:transform 0.3s;
+}
+.select_img_rotate{
+ transform:rotate(180deg); 
+}
+.icon-clear{
+  margin-right: 15rpx;
+}
+.option_box{
+ position: absolute;
+ top: 90rpx;
+ width: 100%;
+ box-sizing: border-box;
+ height: 0;
+ overflow-y: auto;
+ border-top: 0;
+ background-color: #fff;
+ transition: height 0.3s;
+ z-index: 999;
+}
+.option{
+ display: block;
+ line-height: 55rpx;
+ font-size: 36rpx;
+ border-bottom: 1px solid #efefef;
+ padding: 10rpx 10rpx 10rpx 20rpx;
+}
+
+/* 搜索输入框 2*/
+.sousuo {
+   width: 100%;
+   height: 70rpx;
+   border: 1px solid #999;
+   border-radius: 15rpx;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.icon-sousuo {
+  margin-left: 15rpx;
+}
+
+.sousuo-inp {
+   min-width: 72%;
+   height: 70rpx;
+   margin-left: 15rpx;
+   padding: 5rpx;
+}
+
+.sousuo-text {
+  width: 20%;
+  height: 70rpx;
+  margin: 0rpx;
+  padding: 0px;
+  font-size: 35rpx;
+  line-height: 70rpx;
+  border-radius: 0px;
+  color: #ff5722;
+  background-color:transparent;
+  border-left: 1px solid #999;
+}
+button::after{
+  border-radius: 0px;
+  border:none;
+}
+/* 楼盘导航 */
+.active-navigation {
+  width: 94%;
+  height: 200rpx;
+  color: #666;
+  margin:25rpx auto 0rpx auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+ 
+navigator{
+  width: 20%;
+}
+.active-img {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx 0rpx 0rpx 20rpx;
+}
+
+.active-text {
+  margin-top: 20rpx;
+  text-align: center;
+}
+/* 房源列表 */
+.list{
+  width: 100%;
+  background-color: #fff;
+  margin-top: 20rpx;
+  box-sizing: border-box;
+}
+.list-content{
+   width: 100%;
+   margin: auto;
+}
+.list-title{
+  width: 95%;
+  margin: auto;
+  height: 70rpx;
+  padding-top: 25rpx;
+  border-bottom: 1px solid rgb(219, 218, 218);
+}
+.title-text{
+line-height: 50rpx;
+padding: 13rpx;
+border-left: 5px solid #33cccc;
+font-size: 35rpx;
+}

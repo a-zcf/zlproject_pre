@@ -1,0 +1,132 @@
+<import src='/pages/template/footprint-tem-list/footprint-tem-list.wxml' />
+<view class="officerent">
+  <!-- 搜索框 -->
+  <form bindsubmit="sharedOfficeQuery">
+    <view class="sousuo">
+      <i class="iconfont icon-sousuo"></i> 
+      <input class="sousuo-inp" type="text" name="inputVal" placeholder="请输入小区或者商圈名"></input>
+      <!-- <icon wx:if="{{formData.length !==0}}" bindtap="clearInput" type="clear" size="14" class="icon-clear"></icon> -->
+      <button formType="submit" class="sousuo-text">搜索</button>
+    </view>
+  </form>
+  <!-- s筛选导航 -->
+  <view id="swiper-tab">
+    <view class="swiper-tab" style="border-bottom:1px solid #999;">
+      <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="tabNav">
+        {{first}}
+        <i class="{{currentTab==0 ? 'on' : ''}}" data-current="0"></i>
+      </view>
+      <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="tabNav">{{thirds}}
+        <i class="{{currentTab==1 ? 'on' : ''}}" data-current="1"></i>
+      </view>
+      <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" bindtap="tabNav">{{fours}}
+        <i class="{{currentTab==2 ? 'on' : ''}}" data-current="2"></i>
+      </view>
+    </view>
+    <swiper current="{{currentTab}}" duration="1000" class="swiper-item" style='display:{{displays}}'>
+      <!-- 区域 -->
+      <swiper-item class="shaixuankuang" catchtouchmove='catchTouchMove'>
+        <view class="qiehuan">
+          <view class="qiehuan-qy" wx:for="{{quyu}}" wx:key="index" wx:for="{{homeData}}" wx:key="index" bindtap="qiehuanqy" data-id="{{index}}" data-village="{{item.qyName}}" style="{{index == qyid?'color: #e8580c':'color:gray'}}">
+            <text>{{item.qyName==''?'全部':item.qyName}}</text>
+          </view>
+        </view>
+      </swiper-item>
+      <!-- 总价 -->
+      <swiper-item catchtouchmove='catchTouchMove' class="shaixuankuang">
+        <view class="location_bottom">
+          <view class="danjia">
+            <view class="danjia-title">全部</view>
+            <view class="mianji">
+              <text class="mianji-text" wx:for="{{mianji}}" wx:key="index" data-index="{{index}}" data-totastart="{{item.minTotalPriceStart}}" data-totalend="{{item.minTotalPriceEnd}}" bindtap="zongjia" style="{{zjId == index?'color: #e8580c':''}}">{{item.mjName}}</text>
+            </view>
+          </view>
+          <view class="qingkong" style="margin-top:270rpx;">
+            <span class="tianjian" bindtap="chongzhi">重置</span>
+            <p class="queren" bindtap="quding">确认</p>
+          </view>
+        </view>
+      </swiper-item>
+
+      <swiper-item class="shaixuankuang" catchtouchmove='catchTouchMove'>
+        <view class="wylx">
+          <view class="wylx-title">类型</view>
+          <!-- <checkbox-group>
+            <label class="checkbox" wx:for="{{leixing}}" wx:key="index">
+              <checkbox value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+            </label>
+          </checkbox-group> -->
+          <view class="page__bd">
+            <view class="section section_gap">
+              <radio-group class="radio-group" bindchange="radioChange">
+                <radio class="radio checkbox" 
+                wx:for="{{leixing}}" 
+                wx:key="name" 
+                value="{{item.houseType}}{{item.officeType}}"
+                checked="{{item.checked}}">
+                  <text>{{item.value}}</text>
+                </radio>
+              </radio-group>
+            </view>
+          </view>
+
+        </view>
+        <view class="wylx">
+          <view class="wylx-title">装修</view>
+          <view class="page__bd">
+            <view class="section section_gap">
+              <radio-group class="radio-group" bindchange="radioChange">
+                <radio class="radio checkbox" 
+                wx:for="{{zhuangxiu}}" 
+                wx:key="name" 
+                value="{{item.houseType}}{{item.fitup}}" 
+                checked="{{item.checked}}">
+                  <text>{{item.value}}</text>
+                </radio>
+              </radio-group>
+            </view>
+          </view>
+        </view>
+        <view class="qingkong" style="margin-top:415rpx;">
+          <span class="tianjian" bindtap="chongzhi">不限条件</span>
+          <p class="queren" bindtap="quding" >确认</p>
+        </view>
+      </swiper-item>
+
+    </swiper>
+  </view>
+  <!-- 列表 -->
+<scroll-view scroll-y="true">
+  <view class="list">
+    <view class="list-content">
+      <view class="listSpecials-content" 
+      wx:for="{{sharedOfficeList}}" 
+      wx:key="index" 
+      bindtap="sharedDetail" 
+      data-id="{{item.id}}"
+      data-baseservicer="{{item.baseServicer}}"
+      data-entservicer="{{item.enterpriseServicer}}"
+      data-describes="{{item.describes}}" 
+      data-intdetail="{{item.introductionDetail}}">
+        <image class="specialsImg" src="{{imgList}}{{item.imageUrl}}"></image>
+        <view class="con-right">
+          <text class="describe">{{item.title}}</text>
+          <view class="address">
+            <text class="address_01">{{item.village}}</text>
+            <!-- <text class="address_01">{{item.address_02}}</text>
+            <text>{{item.specifyes}}</text> -->
+          </view>
+          <text class="office-rent {{item.houseType===3?'bgShared':''}}">{{item.houseType===3?'共享办公':''}}</text>
+          <view class="square-price">
+            <text>单价：<text class="monthlySquare">{{item.minUnitPrice}}元/㎡月</text></text>
+            <text>总价：<text class="monthlySquare">{{item.minTotalPrice}}万元</text></text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  </scroll-view>
+  <!-- 上拉加载更多 -->
+  <i-load-more i-class="{{hasMore?'':'load-more'}}" xhidden="{{loadingHidden}}" style="width:100%;" tip="{{loadingTip}}" loading="{{hasMore}}" />
+  <view class="swiper-beijing" bindtap="hideNav" style='display:{{displays}}'></view>
+</view>

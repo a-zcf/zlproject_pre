@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "深圳经销商房源管理",
+  "navigationBarBackgroundColor": "#4169E1",
+  "usingComponents": {
+    "i-load-more": "../dist/load-more/index"
+  }
+}

@@ -1,0 +1,88 @@
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="details">
+  <view class="switch_img">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" circular="{{circular}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActivecolor}}" class="swiperclass">
+      <block wx:for="{{newHousDetails.itemList}}" wx:key>
+        <swiper-item>
+          <image src="{{imgList}}{{item.imageUrl}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="content-title">
+      <text class="con-title">{{newHousDetails.title}}</text>
+      <text class="{{salesDetailsList.newhouseType == null?'hidden':'con-lx'}}">{{newHousDetails.newhouseType==='0'?'最近楼盘':'' || newHousDetails.newhouseType==='1'?'优惠楼盘':'' || newHousDetails.newhouseType==='2'?'优选楼盘':''}}</text>
+      <view class="con-sdm">
+        <view class="sdm">
+          <text>参考均价</text>
+          <text class="sdm-textcolor">{{newHousDetails.averagePriice}}元/㎡</text>
+        </view>
+        <view class="sdm lr">
+          <text>楼盘总价</text>
+          <text class="sdm-textcolor">{{newHousDetails.minTotalPrice}}万/套起</text>
+        </view>
+        <view class="sdm">
+          <text>物业用途</text>
+          <text class="sdm-textcolor">住宅</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 项目详情 -->
+    <view class="project-details">
+      <!-- <text class="pd-title">项目详情</text> -->
+      <view class="pd-conText">
+        <!-- <template is="wxParse" data="{{wxParseData:describes.nodes}}" /> -->
+        <text class="desc" wx:for="{{desc}}" wx:key="index">
+           {{item.name}}：{{item.value}}
+          </text>
+          <text>{{tips}}</text>
+      </view>
+      <view class="full-detail" data-id="{{newHousDetails.id}}" data-describes="{{newHousDetails.describes}}" bindtap="moreInformation">查看全部楼盘信息</view>
+    </view>
+  </view>
+  <!-- 主力户型 -->
+  <view class="lflx">
+    <view class="lflx-details">
+      <!-- <text class="lflx-title">主力户型</text> -->
+      <view class="zlhx-con">
+        <view class="zlhx-conl" style="margin-right: 15rpx;">
+          <template is="wxParse" data="{{wxParseData:intdetail.nodes}}" />
+        </view>
+      </view>
+    </view>
+    <!-- 楼盘信息 -->
+    <view class="project-details">
+      <!-- <text class="pd-title">楼盘动态</text> -->
+      <view style="background-color:#f7f7f7; padding-bottom: 15rpx;">
+        <template is="wxParse" data="{{wxParseData:baseservicer.nodes}}" />
+      </view>
+      <view class="full-detail" bindtap="floorDynamic" data-id="{{newHousDetails.id}}" data-baseservicer="{{newHousDetails.baseServicer}}">查看跟多楼盘信息</view>
+    </view>
+    <!-- 周边 -->
+    <view class="zb">
+      <view>位置周边</view>
+      <view class="zb-dt">
+      <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" markers="{{markers}}" bindmarkertap="markertap" bindregionchange="regionchange" show-location style="width: 100%; height: 350rpx;">
+        </map>
+      </view>
+      <view>
+        <button style="margin-top:15rpx;" type="primary" bindtap="navigate">导航</button>
+      </view>
+    </view>
+  </view>
+  <!-- 关注、分享、免费致电 -->
+  <view class="footer">
+    <view class="gz" bindtap="follow" data-id="{{newHousDetails.id}}" style="{{status==1?'color:red;':''}}">
+      <i class="iconfont icon-guanzhu"></i>
+      <view>关注</view>
+    </view>
+    <button open-type="share" data-id="{{newHousDetails.id}}">
+      <i class="iconfont icon-fenxiang"></i>
+      <view style="width:100%;">分享</view>
+    </button>
+    <view class="mfdh" bindtap="tollTelephone" data-phone="{{newHousDetails.phone}}">
+      <text>免费电话</text>
+    </view>
+  </view>
+
+</view>

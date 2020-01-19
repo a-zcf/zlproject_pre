@@ -1,0 +1,122 @@
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="details">
+  <view class="switch_img">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" circular="{{circular}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActivecolor}}" class="swiperclass">
+      <block wx:for="{{sharedDetail.itemList}}" wx:key>
+        <swiper-item>
+          <image src="{{imgList}}{{item.imageUrl}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="content-title">
+      <text class="con-title">{{sharedDetail.title}}</text>
+      <text class="con-lx" class="{{sharedDetail.houseType!=3 && sharedDetail.houseType===null?'hidden':'con-lx'}}">{{sharedDetail.houseType===3?'共享办公':''}}</text>
+      <view class="con-sdm">
+        <view class="sdm">
+          <text>单价</text>
+          <text class="sdm-textcolor">{{sharedDetail.minUnitPrice}}元/㎡</text>
+        </view>
+        <view class="sdm lr">
+          <text>工位数</text>
+          <text class="sdm-textcolor">2-9工位</text>
+        </view>
+        <view class="sdm">
+          <text>在租</text>
+          <text class="sdm-textcolor">12套</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 位置 -->
+    <view class="position">
+      <view class="position-con">
+        <i-icon type="coordinates_fill" size="28" />
+        <text >{{sharedDetail.addesses != null ? sharedDetail.addesses:'暂无详细地址'}}</text>
+      </view>
+      <view class="position-map">
+      <!-- <button type="primary" bindtap="navigate">
+      </button> -->
+        <view style="text-align: center;width:100%;" bindtap="navigate">
+          <i-icon type="picture_fill" size="28" />
+        </view>
+        <view>查看地图</view>
+      </view>
+    </view>
+    <view>
+
+    </view>
+  </view>
+  <!-- 朝来科技园出租 -->
+  <view class="xianqing-img">
+    <!-- <view class="xianqing-title">朝来科技园出租</view> -->
+    <!-- 横向滑动列表 -->
+    <scroll-view scroll-x class="scroll-x">
+      <view class="view-parent" wx:for="{{sharedDetail.itemList}}">
+        <image class="scroll-img" src="{{imgList}}{{item.imageUrl}}"></image>
+        <view>{{item.itemname}}</view>
+        <view>
+          <text style="color:#ff6600;">{{item.price}}</text>元/工位/月</view>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 基础服务 -->
+  <view class="jcfw">
+    <view class="xianqing-title">基础服务</view>
+    <view class="jcfw-con">
+      <template is="wxParse" data="{{wxParseData:baseservicer.nodes}}" />
+    </view>
+  </view>
+
+  <!-- 企业服务 -->
+  <view class="jcfw">
+    <view class="xianqing-title">企业服务</view>
+    <view class="jcfw-con">
+      <template is="wxParse" data="{{wxParseData:entservicer.nodes}}" />
+    </view>
+  </view>
+  <!-- 企业服务 -->
+  <view class="jcfw">
+    <!-- <view class="xianqing-title">朝来科技园</view> -->
+    <view class="qy-con">
+      <view class="img">
+        <template is="wxParse" data="{{wxParseData:intdetail.nodes}}" />
+      </view>
+    </view>
+    <view class="gsjj">
+      <view class="pd-conText">
+        <text class="desc" wx:for="{{desc}}" wx:key="index">
+           {{item.name}}：{{item.value}}
+          </text>
+          <text>{{tips}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 周边 -->
+  <view class="zb">
+    <view>位置周边</view>
+    <view class="zb-dt">
+      <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" markers="{{markers}}" bindmarkertap="markertap" bindregionchange="regionchange" show-location style="width: 100%; height: 350rpx;">
+      </map>
+    </view>
+    <view>
+      <button style="margin-top:15rpx;" type="primary" bindtap="navigate">导航</button>
+    </view>
+  </view>
+
+  <!-- 关注、分享、免费致电 -->
+  <view class="footer">
+    <view class="gz" bindtap="follow" data-id="{{sharedDetail.id}}" style="{{status==1?'color:red;':''}}">
+      <i class="iconfont icon-guanzhu"></i>
+      <view>关注</view>
+    </view>
+    <button open-type="share" data-id="{{sharedDetail.id}}">
+      <i class="iconfont icon-fenxiang"></i>
+      <view style="width:100%;">分享</view>
+    </button>
+    <view class="mfdh" bindtap="tollTelephone" data-phone="{{sharedDetail.phone}}">
+      <text>免费电话</text>
+    </view>
+  </view>
+
+</view>

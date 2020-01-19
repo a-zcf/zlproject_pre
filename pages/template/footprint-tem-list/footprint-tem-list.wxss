@@ -1,0 +1,69 @@
+/* 足迹 */
+.listSpecials-content{
+  width: 95%;
+  margin: auto;
+  margin-top:20rpx;
+  display: flex;
+  flex-wrap: nowrap; 
+  /* padding-right: 28rpx; */
+  border-bottom: 1px solid rgb(219, 218, 218);
+  padding-bottom: 20rpx;
+  /* margin-right: 35rpx; */
+}
+.specialsImg{
+  width: 45%;
+  height: 110px;
+  margin-right: 20rpx;
+}
+.con-right{
+  width: 55%;
+}
+.address{
+  padding-bottom: 8rpx;
+  color: #999;
+}
+.describe{
+  font-size: 35rpx;
+  /* height: 85rpx;
+  line-height: 40rpx; */
+  display: block;
+  overflow:hidden;
+  display:-webkit-box;
+  text-overflow:ellipsis;
+  -webkit-line-clamp:1; 
+  -webkit-box-orient:vertical;
+  white-space:normal;
+}
+.address_01{
+  margin-right: 15rpx;
+}
+.office-rent{
+  padding: 5rpx;
+  border-radius: 10rpx;
+  text-align: center;
+  color: #fff;
+}
+.square-price{
+  margin-top: 8rpx;
+  display: flex;
+  flex-direction: column;
+  color: #999;
+}
+.monthlySquare{
+ color:#ff5722;
+}
+/* .price{
+  color: #999;
+} */
+.bgRent{
+  background-color: #99cc66;
+}
+.bgSales{
+  background-color:#18cdb5;
+}
+.bgHouses{
+  background-color: #18b5cd;
+}
+.bgShared{
+  background-color: #ff9966;
+}

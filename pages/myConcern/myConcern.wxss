@@ -1,0 +1,12 @@
+@import '/pages/template/footprint-tem-list/footprint-tem-list.wxss';
+/* 足迹房源列表 */
+.myconcern{
+  width: 100%;
+  background-color: #fff;
+  /* margin-top: 20rpx; */
+  box-sizing: border-box;
+}
+.list-content{
+   width: 100%;
+   margin: auto;
+}

@@ -1,0 +1,31 @@
+.abouus {
+  width: 100%;
+  display: flex;
+  flex-direction:column;
+}
+.abouus .abouus-img {
+  width: 250rpx;
+  height: 200rpx;
+  border-radius: 50rpx;
+  margin:150rpx auto 0rpx auto;
+}
+.abouus .abouus-title {
+  text-align: center;
+  padding: 18rpx;
+  font-size: 36rpx;
+  color: #0066cc;
+  font-weight: 600;
+}
+.abouus .abouus-text {
+ padding: 18rpx;
+ line-height: 50rpx;
+}
+.abouus .abouus-https {
+  margin-top: 350rpx;
+   text-align: center;
+   color: #666;
+}
+.abouus .abouus-phone {
+  margin: 30rpx auto 0rpx auto;
+  color: #666;
+}

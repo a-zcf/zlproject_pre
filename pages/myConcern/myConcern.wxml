@@ -1,0 +1,37 @@
+<import src='/pages/template/footprint-tem-list/footprint-tem-list.wxml' />
+<scroll-view scroll-y="true">
+<view class="myconcern">
+  <view class="list-content">
+    <block wx:for="{{myConcemList}}" wx:for-item="item" wx:key>
+      <view class="listSpecials-content" 
+      bindtap="detailsList" 
+      data-id="{{item.id}}" 
+      data-housetype="{{item.houseType}}" 
+      data-rentable="{{item.rentable}}" 
+      data-describes="{{item.describes}}" 
+      data-intdetail="{{item.introductionDetail}}" 
+      data-baseservicer="{{item.baseServicer}}">
+        <image class="specialsImg" src="{{imgList}}{{item.imageUrl}}"></image>
+        <view class="con-right">
+          <text class="describe">{{item.title}}</text>
+          <view class="address">
+            <text class="address_01">{{item.village}}</text>
+            <!-- <text class="address_01">{{item.address_02}}</text>
+            <text>{{item.maxHouseArea}}㎡</text> -->
+          </view>
+          <text class="office-rent {{item.houseType===1 && item.rentable==='1'?'bgRent':'' ||item.houseType===1 && item.rentable==='0'?'bgSales':'' || item.houseType===2?'bgHouses':'' || item.houseType===3?'bgShared':''}}">{{item.houseType===1 && item.rentable==='1'?'写字楼租':'' ||item.houseType===1 && item.rentable==='0'?'写字楼售':'' || item.houseType===2?'新房':'' || item.houseType===3?'共享办公':''}}</text>
+          <view class="square-price">
+            <text>{{item.houseType===1 && item.rentable==='1'?'租金：':'' ||item.houseType===1 && item.rentable==='0'?'售价：':'' || item.houseType===2?'售价：':'' || item.houseType===3?'单价：':''}}<text class="monthlySquare">{{item.minUnitPrice}}元/㎡月</text></text>
+              <text>总价：<text class="monthlySquare">{{item.minTotalPrice}}万元/月</text></text>
+          </view>
+        </view>
+      </view>
+      <!-- <view>
+        <template is='footprintList' data='{{...item}}' />
+      </view> -->
+    </block>
+  </view>
+</view>
+</scroll-view>
+<!-- 上拉加载更多 --> 
+  <i-load-more i-class="{{hasMore?'':'load-more'}}" hidden="{{loadingHidden}}" style="width:100%;" tip="{{loadingTip}}" loading="{{hasMore}}" />

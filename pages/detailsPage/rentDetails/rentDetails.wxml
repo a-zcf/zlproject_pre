@@ -1,0 +1,78 @@
+<import src="../../../wxParse/wxParse.wxml" />
+<view class="details">
+  <view class="switch_img">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" circular="{{circular}}" duration="{{duration}}" indicator-color="{{indicatorColor}}" indicator-active-color="{{indicatorActivecolor}}" class="swiperclass">
+      <block wx:for="{{rentDetails.itemList}}" wx:key>
+        <swiper-item>
+          <image src="{{imgList}}{{item.imageUrl}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="content-title">
+      <text class="con-title">{{rentDetails.title}}</text>
+      <text class="{{rentDetails.rentable !='1' && rentDetails.rentable ==null?'hidden':'con-lx'}}">{{rentDetails.rentable==='1'?'写字楼租':''}}</text>
+      <view class="con-sdm">
+        <view class="sdm">
+          <text>租金</text>
+          <text class="sdm-textcolor">{{rentDetails.minTotalPrice}}元/月</text>
+        </view>
+        <view class="sdm lr">
+          <text>单价</text>
+          <text class="sdm-textcolor">{{rentDetails.minUnitPrice}}/㎡月</text>
+        </view>
+        <view class="sdm">
+          <text>建筑面积</text>
+          <text class="sdm-textcolor">{{rentDetails.minHouseArea}} ~ {{rentDetails.maxHouseArea}}㎡</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 项目详情 -->
+    <view class="project-details">
+      <!-- <text class="pd-title">项目详情</text> -->
+      <view class="pd-conText">
+        <!-- <template is="wxParse" data="{{wxParseData:describes.nodes}}" /> -->
+          <text class="desc" wx:for="{{desc}}" wx:key="index">
+           {{item.name}}：{{item.value}}
+          </text>
+          <text>{{tips}}</text>
+      </view>
+      <view class="full-detail" data-id="{{rentDetails.id}}" data-describes="{{rentDetails.describes}}" bindtap="moreInformation">查看更多房源信息</view>
+    </view>
+  </view>
+  <!-- 楼房信息类型 -->
+  <view class="lflx">
+    <view class="lflx-details">
+      <!-- <text class="lflx-title">深圳中心天元</text> -->
+      <view>
+        <template is="wxParse" data="{{wxParseData:intdetail.nodes}}" />
+      </view>
+    </view>
+    <!-- 周边 -->
+    <view class="zb">
+      <view>位置周边</view>
+      <view class="zb-dt">
+        <map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" markers="{{markers}}" bindmarkertap="markertap" bindregionchange="regionchange" show-location style="width: 100%; height: 350rpx;">
+        </map>
+      </view>
+      <view>
+        <button style="margin-top:15rpx;" type="primary" bindtap="navigate">导航</button>
+      </view>
+    </view>
+  </view>
+  <!-- 关注、分享、免费致电 -->
+  <view class="footer">
+    <view class="gz" bindtap="follow" data-id="{{rentDetails.id}}" style="{{status==1?'color:red;':''}}">
+      <i class="iconfont icon-guanzhu"></i>
+      <view>关注</view>
+    </view>
+    <button open-type="share" data-id="{{rentDetails.id}}">
+      <i class="iconfont icon-fenxiang"></i>
+      <view style="width:100%;">分享</view>
+    </button>
+    <view class="mfdh" bindtap="tollTelephone" data-phone="{{rentDetails.phone}}">
+      <text>免费电话</text>
+    </view>
+  </view>
+
+</view>

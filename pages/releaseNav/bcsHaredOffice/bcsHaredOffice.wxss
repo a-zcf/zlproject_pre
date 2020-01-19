@@ -1,0 +1,163 @@
+.releaserent {
+  width: 100;
+}
+
+.releaserent .rel-edit {
+  width: 95%;
+  margin: auto;
+  margin-top: 20rpx;
+}
+
+.releaserent .rel-edit .title {
+  /* border: 1px solid #333; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 45rpx;
+}
+
+.rel-edit .title .title-text {
+  width: 31%;
+  font-size: 35rpx;
+  font-weight: 600;
+  /* margin-right: 15rpx; */
+}
+
+.rel-edit .title .title-text1 {
+  width: 14%;
+  font-size: 35rpx;
+  font-weight: 600;
+  /* margin-right: 15rpx; */
+}
+
+.rel-edit .title .title-text2 {
+  width: 25%;
+  font-size: 35rpx;
+  font-weight: 600;
+  /* margin-right: 15rpx; */
+}
+
+.rel-edit .title .title-inp {
+  width: 70%;
+  border-bottom: 1px solid #999;
+}
+
+.rel-edit .title .title-inp1 {
+  width: 86%;
+  border-bottom: 1px solid #999;
+}
+
+.rel-edit .title .title-inp2 {
+  width: 80%;
+  border-bottom: 1px solid #999;
+}
+
+.releaserent .rel-edit .state {
+  display: flex;
+  align-items: center;
+  margin-top: 45rpx;
+}
+
+.rel-edit .state .state-text {
+  font-size: 35rpx;
+  font-weight: 600;
+  margin-right: 30rpx;
+}
+
+.radio {
+  margin-right: 80rpx;
+}
+
+/* 图片上传 */
+
+.rel-edit .uploader {
+  display: flex;
+  position: relative;
+  height: 100rpx;
+  line-height: 60rpx;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #eee;
+  transform: translate3d(0rpx, 0px, 0px);
+}
+
+.uploader .up-fm {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+
+.uploader .up-Number {
+  color: #999;
+  text-align: right;
+}
+.rel-edit .uploader-cell {
+  display: flex;
+    flex-wrap: wrap;
+  width: 100%;
+    padding: 40rpx;
+    box-sizing: border-box;
+}
+.uploader-cell .uploader-cellImg {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-right: 30rpx;
+    margin-bottom: 30rpx;
+    width: 165rpx;
+    height: 165rpx;
+}
+.uploader-cellImg .uploader-cellIcon {
+ position: absolute;
+    right: -20rpx;
+    top: -20rpx;
+    background: #fff;
+    border-radius: 50%;
+}
+.uploader-cellImg image {
+    width: 100%;
+    height: 100%;
+}
+.uploader-cell .uploader-butt {
+ /* float: left; */
+    position: relative;
+    margin-right: 25rpx;
+    margin-bottom: 25rpx;
+    width: 165rpx;
+    height: 165rpx;
+    border: 2rpx solid #d9d9d9;
+    box-sizing: border-box;
+}
+.uploader-cell .uploader-butt:before {
+    content: " ";
+    position: absolute;
+    width: 4rpx;
+    height: 79rpx;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #d9d9d9;
+}
+.uploader-cell .uploader-butt:after {
+    content: " ";
+    position: absolute;
+    height: 4rpx;
+    width: 79rpx;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #d9d9d9;
+}
+.but {
+  width: 100%;
+  height: 100rpx;
+  background-color: #00ccff;
+  position:fixed;
+  bottom: 0rpx;
+  line-height: 110rpx;
+  text-align: center;
+  font-size: 40rpx;
+  color: #fff;
+}

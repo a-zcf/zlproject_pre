@@ -1,0 +1,11 @@
+<import src="../../../wxParse/wxParse.wxml"/>
+<view class="more">
+  <view class="more-lpgk">
+  <!-- <view class="title">房源信息</view> -->
+  <!-- <template is="wxParse" data="{{wxParseData:describes.nodes}}"/> -->
+  <text wx:for="{{desc}}" wx:key="index">
+    {{item.name}}：{{item.value}}
+  </text>
+  <text>{{tips}}</text>
+  </view>
+</view>

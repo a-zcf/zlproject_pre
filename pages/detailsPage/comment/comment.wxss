@@ -1,0 +1,15 @@
+.fydp{
+  width: 100%;
+}
+.fydp-title{
+  width: 95%;
+  margin: auto;
+  margin-top: 20rpx;
+}
+.title-text{
+  font-size: 35rpx;
+  font-weight: 600;
+}
+.fydp-con{
+ margin-top: 10rpx;
+}

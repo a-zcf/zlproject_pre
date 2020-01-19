@@ -1,0 +1,71 @@
+.ui_tab{
+    position: relative;
+}
+.ui_navbar{
+    display: flex;
+    position: relative;
+}
+.ui_navbar_item{
+    flex: 1;
+    text-align: center;
+    padding: 20rpx 0;
+    background-color: rgb(235, 232, 232);
+    font-size: 30rpx;
+}
+.ui_navbar_item_on{
+    color: #fff;
+    background: #00ccff;
+}
+
+.barIndex{
+  width: 95%;
+  margin: auto;
+}
+.listSpecials-content{
+  margin-top:20rpx;
+  display: flex;
+  flex-wrap: nowrap; 
+  padding-right: 28rpx;
+  border-bottom: 1px solid #999;
+  padding-bottom: 20rpx;
+  /* margin-right: 35rpx; */
+}
+.specialsImg{
+  width: 150px;
+  height: 110px;
+  margin-right: 15rpx;
+}
+.address{
+  padding-bottom: 8rpx;
+  color: #999;
+}
+.describe{
+  font-size: 35rpx;
+  height: 85rpx;
+  line-height: 40rpx;
+  display: block;
+  overflow:hidden;
+  display:-webkit-box;
+  text-overflow:ellipsis;
+  -webkit-line-clamp:2; 
+  -webkit-box-orient:vertical;
+  white-space:normal;
+}
+.address_01{
+  margin-right: 15rpx;
+}
+.office-rent{
+  border:1px solid #999;
+  padding: 5rpx;
+  background-color: rgb(221, 218, 218);
+}
+.square-price{
+  margin-top: 8rpx;
+}
+.monthlySquare{
+ margin-right: 15rpx;
+ color:#ff5722;
+}
+.price{
+  color: #999;
+}
